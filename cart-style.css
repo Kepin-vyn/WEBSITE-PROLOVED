@@ -1,0 +1,175 @@
+/* cart-style.css - Satu card besar, total di bawah (mirip preloved.co.id) */
+
+.cart-page {
+    padding: 60px 0;
+    background: #f9f9f9;
+    min-height: 100vh;
+}
+
+.cart-page h1 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+/* Card Utama - Satu Card Besar */
+.cart-main-card {
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    margin-left: 0;                    /* Rata kiri */
+    margin-right: 50px;                /* Margin kanan 50px seperti header */
+    max-width: none;
+}
+
+.container {
+    padding: 0 50px;           /* Sama seperti header */
+    max-width: none;           /* Hilangkan max-width biar card bisa rata kiri */
+}
+
+/* Daftar Item */
+.cart-items {
+    padding: 40px 40px 0 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.cart-item img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.item-info h3 {
+    font-size: 22px;
+    margin: 0 0 10px;
+    color: #000;
+}
+
+.item-info .price {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 0 8px;
+    color: #000;
+}
+
+.item-info .size {
+    font-size: 16px;
+    color: #666;
+    margin: 0 0 15px;
+}
+
+.remove-item {
+    color: #d00;
+    font-size: 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.remove-item:hover {
+    text-decoration: underline;
+}
+
+/* Summary di Bawah */
+.cart-summary {
+    padding: 30px 40px;
+    background: #fafafa;
+    border-top: 1px solid #eee;
+    text-align: right;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.total span {
+    font-weight: normal;
+}
+
+.total strong {
+    font-weight: bold;
+    color: #000;
+}
+
+.shipping-note {
+    font-size: 15px;
+    color: #888;
+    margin-bottom: 30px;
+}
+
+.btn-checkout {
+    width: 100%;
+    padding: 18px;
+    background: #000;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-checkout:hover {
+    background: #333;
+}
+
+/* Empty State */
+.empty-cart {
+    text-align: center;
+    padding: 100px 20px;
+    color: #666;
+}
+
+.empty-cart p {
+    font-size: 22px;
+    margin-bottom: 40px;
+}
+
+.btn-shop {
+    padding: 18px 80px;
+    background: #000;
+    color: white;
+    border-radius: 30px;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cart-main-card {
+        padding: 20px;
+    }
+    .cart-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    .cart-item img {
+        width: 100%;
+        height: 200px;
+    }
+    .cart-summary {
+        padding: 30px 20px;
+    }
+}
