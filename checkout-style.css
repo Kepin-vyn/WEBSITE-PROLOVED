@@ -149,6 +149,35 @@
     text-align: center;
 }
 
+<<<<<<< Updated upstream
+=======
+.payment-options{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 10px;
+}
+
+.pay-option{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.pay-option input{
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.pay-option span{
+    font-weight: 600;
+    color:#000;
+}
+
+>>>>>>> Stashed changes
 .btn-pay {
     width: 100%;
     padding: 20px;
