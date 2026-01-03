@@ -1,0 +1,317 @@
+/* products-style.css - Versi FINAL (tulisan pill tidak bold saat hover/active) */
+
+/* Container Utama */
+.products-page-container {
+    padding: 30px 0;
+    background: #fff;
+}
+
+.products-page-container .container {
+    max-width: 1315px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* Filter Pills Bar */
+.filter-pills-bar {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+    padding-bottom: 0px;
+    border-bottom: #eee;
+}
+
+/* Pill Filter - Tulisan tetap normal, hanya border berubah */
+.filter-pill {
+    position: relative;
+    padding: 8px 20px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    background: #fff;
+    font-size: 14px;
+    font-weight: 500;                 /* Normal, tidak berubah */
+    cursor: pointer;
+    transition: border-color 0.3s ease; /* Hanya border yang berubah */
+    white-space: nowrap;
+    text-align: center;
+    color: #444;
+}
+
+/* Hover: hanya border lebih gelap */
+.filter-pill:hover {
+    border-color: #aaa;
+}
+
+/* Active: border hitam, sedikit lebih tebal agar terlihat jelas */
+.filter-pill.active {
+    border-color: #000;
+    border-width: 1.5px;              /* Sedikit lebih tebal agar terlihat aktif */
+    /* Tidak ada perubahan font-weight atau background */
+}
+
+/* Dropdown */
+.dropdown-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;                  /* Rata kiri dengan pill */
+    transform: none;          /* Hilangkan centering */
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 14px;
+    padding: 16px 20px;
+    margin-top: 8px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    z-index: 1000;
+    min-width: 240px;
+    max-width: 300px;
+    text-align: left;
+}
+
+.dropdown-options a,
+.dropdown-options label {
+    display: block;
+    padding: 10px 0;
+    color: #555;
+    font-size: 14px;
+    cursor: pointer;
+    transition: color 0.25s ease;
+    text-decoration: none;
+    font-weight: 500; /* Tetap normal */
+}
+
+.dropdown-options a:hover,
+.dropdown-options label:hover {
+    color: #000;
+    /* Tidak bold */
+}
+
+/* Checkbox */
+.dropdown-options input[type="checkbox"] {
+    margin-right: 8px;
+    transform: scale(1.1);
+}
+
+/* Form Harga */
+.dropdown-options form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dropdown-options input[type="number"] {
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.dropdown-options button {
+    padding: 10px;
+    background: #000;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+.dropdown-options button:hover {
+    background: #333;
+}
+
+/* Selected Tags */
+.selected-tags {
+    display: flex;
+    gap: 10px;                /* Gap sama dengan pill atas */
+    flex-wrap: wrap;
+    margin: 1px 0 30px 0;    /* Jarak bawah agar tidak mepet subkategori */
+}
+
+.filter-tag {
+    background: #f0f0f0;      /* Abu-abu muda agak gelap */
+    padding: 8px 20px;        /* Padding sama dengan pill */
+    border-radius: 30px;      /* Radius sama */
+    font-size: 14px;          /* Ukuran teks sama */
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #ddd;   /* Border tipis mirip pill */
+    color: #444;
+    white-space: nowrap;
+}
+
+.close-tag {
+    cursor: pointer;
+    font-weight: bold;
+    color: #777;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    transition: all 0.2s ease;
+}
+
+.close-tag:hover {
+    background: #ddd;
+    color: #000;
+}
+
+/* Subkategori Horizontal */
+.subcategories-horizontal {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    font-size: 16px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #eee;
+}
+
+.subcategories-horizontal a {
+    color: #666;
+    text-decoration: none;
+    padding: 6px 0; 
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.subcategories-horizontal a:hover,
+.subcategories-horizontal a.active {
+    color: #000;
+    /* Tidak bold */
+}
+
+/* Grid Produk - SUPER MINIMALIS (tanpa radius, tanpa shadow) */
+.products-grid-pinterest {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px 30px;
+    margin-top: 30px;
+}
+
+/* Item Produk - Tidak ada efek apapun */
+.product-item-pinterest {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Gambar - Tanpa radius, tanpa shadow, zoom sedikit saat hover */
+.product-image-wrapper {
+    overflow: hidden;
+    margin-bottom: 16px;
+    aspect-ratio: 3 / 4;  /* Rasio 3:4 — tinggi lebih besar */
+    width: 100%;
+    border-radius: 5px;
+}
+
+.product-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+    border-radius: 5px;
+}
+
+/* Hanya gambar zoom sedikit saat hover */
+.product-item-pinterest:hover img {
+    transform: scale(1.08);
+}
+
+/* Info Tulisan - Langsung di bawah */
+.product-info {
+    text-align: left;
+    margin-top: -10px;               /* Jarak sangat dekat dengan gambar */
+    padding-left: 0;               /* Rata kiri dengan gambar */
+}
+
+.product-price {
+    font-size: 18px;               /* Lebih kecil dari sebelumnya */
+    color: #000;
+    margin: 0 0 2px 0;
+    line-height: 1.2;
+}
+
+.product-name {
+    font-size: 13px;               /* Sedikit lebih kecil */
+    color: #999;
+}
+
+.product-size {
+    font-size: 13px;               /* Size agak besar tapi tidak berlebihan */
+    color: #999;
+    margin-top: -12px;
+}
+
+/* Nama Produk - Di atas harga */
+.product-name {
+    font-size: 13px;
+    color: #999;
+    margin: 0 0 10px 0;
+    line-height: 1.4;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;         /* Maksimal 2 baris */
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}
+
+/* Responsive tetap sama */
+@media (max-width: 1200px) {
+    .products-grid-pinterest {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .products-grid-pinterest {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .products-grid-pinterest {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .products-grid-pinterest {
+        grid-template-columns: 1fr;
+        gap: 40px 0;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .products-page-container .container {
+        padding: 0 20px;
+    }
+    .filter-pills-bar {
+        gap: 8px;
+    }
+    .filter-pill {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+    .subcategories-horizontal {
+        gap: 20px;
+        font-size: 15px;
+    }
+    .dropdown-options {
+        min-width: 220px;
+        left: 0;
+        transform: none;
+    }
+}
