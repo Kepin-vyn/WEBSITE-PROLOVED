@@ -23,6 +23,7 @@
             <!-- Row: Judul + Gambar berdampingan -->
             <div class="about-header">
                 <div class="about-title">
+                    <h1 id="tentang-kami">Apa Sih Preloved Market?</h1>
                     <h2>Apa Sih<br>Preloved Market?</h2>
                 </div>
                 <div class="about-image">
