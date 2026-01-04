@@ -81,7 +81,7 @@ $total_transfer = $total + $kode_unik;
             <p><strong>Transfer ke rekening berikut:</strong></p>
             <p>
               BCA — 123456789<br>
-              a.n. Toko Kamu
+              a.n. PHASE
             </p>
           </div>
 
@@ -96,7 +96,7 @@ $total_transfer = $total + $kode_unik;
 
           <p>Metode pembayaran: <strong>QRIS / E-Wallet</strong></p>
 
-          <img src="qris.png" width="260" style="border-radius:16px;margin:10px 0">
+          <img src="foto/qris.jpeg" width="260" style="border-radius:16px;margin:10px 0">
 
           <p>Scan barcode di atas untuk membayar</p>
 
