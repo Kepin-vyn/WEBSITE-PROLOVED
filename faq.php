@@ -1,7 +1,5 @@
 <?php include 'includes/header_home.php'; ?>
 
-<link rel="stylesheet" href="global-style.css">
-
 <style>
 
 .faq-wrapper{
