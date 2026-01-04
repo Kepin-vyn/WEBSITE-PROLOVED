@@ -149,7 +149,6 @@
     text-align: center;
 }
 
-
 .payment-options{
     display: flex;
     flex-direction: column;
@@ -175,7 +174,6 @@
     font-weight: 600;
     color:#000;
 }
-
 
 .btn-pay {
     width: 100%;

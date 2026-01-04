@@ -6,13 +6,13 @@
     <div class="hero-slider">
         <div class="slides-container">
             <div class="slide active">
-                <img src="assets/Screenshot 2025-12-27 040402.png" alt="Hero 1">
+                <img src="homepagesatu.jpg" alt="Hero 1">
             </div>
             <div class="slide">
-                <img src="assets/download (7).jpg" alt="Hero 2">
+                <img src="homepage.jpeg" alt="Hero 2">
             </div>
             <div class="slide">
-                <img src="assets/download (8).jpg" alt="Hero 3">
+                <img src="banner bawah.jpeg" alt="Hero 3">
             </div>
         </div>
     </div>
@@ -27,7 +27,7 @@
                     <h2>Apa Sih<br>Preloved Market?</h2>
                 </div>
                 <div class="about-image">
-                    <img src="assets/nf2u.jpg" alt="Preloved Market">
+                    <img src="alasan.png" alt="Preloved Market">
                 </div>
             </div>
 
@@ -48,7 +48,7 @@
                 <!-- Item 1 -->
                 <div class="product-item-pinterest">
                     <div class="product-image-wrapper">
-                        <img src="assets/s-l1200.png" alt="Dr. Martens Boots">
+                        <img src="assets/s-l1200 (1).png" alt="Dr. Martens Boots">
                     </div>
                     <div class="product-info">
                         <div class="product-price">Rp 800.000</div>
@@ -60,7 +60,7 @@
                 <!-- Item 2 -->
                 <div class="product-item-pinterest">
                     <div class="product-image-wrapper">
-                        <img src="assets/s-l1200 (1).png" alt="Nike Blazer">
+                        <img src="assets/SEPATU.jpg" alt="Nike Vintage Shoes">
                     </div>
                     <div class="product-info">
                         <div class="product-price">Rp 235.000</div>
@@ -72,7 +72,7 @@
                 <!-- Item 3 -->
                 <div class="product-item-pinterest">
                     <div class="product-image-wrapper">
-                        <img src="assets/hot3.jpg" alt="Track Pants Vintage">
+                        <img src="assets/CELANA.jpg" alt="Track Pants Vintage">
                     </div>
                     <div class="product-info">
                         <div class="product-price">Rp 85.000</div>
@@ -84,7 +84,7 @@
                 <!-- Item 4 -->
                 <div class="product-item-pinterest">
                     <div class="product-image-wrapper">
-                        <img src="assets/hot4.jpg" alt="Ellesse Polo">
+                        <img src="assets/KEMEJA.jpg" alt="Ellesse Polo">
                     </div>
                     <div class="product-info">
                         <div class="product-price">Rp 155.000</div>
@@ -96,7 +96,7 @@
                 <!-- Item 5 -->
                 <div class="product-item-pinterest">
                     <div class="product-image-wrapper">
-                        <img src="assets/hot5.jpg" alt="Dr. Martens Brown">
+                        <img src="assets/DR.JPG" alt="Dr. Martens Brown">
                     </div>
                     <div class="product-info">
                         <div class="product-price">Rp 850.000</div>
@@ -108,7 +108,7 @@
                 <!-- Item 6 -->
                 <div class="product-item-pinterest">
                     <div class="product-image-wrapper">
-                        <img src="assets/hot6.jpg" alt="Vintage Shirt">
+                        <img src="assets/KAOS.jpg" alt="Vintage Shirt">
                     </div>
                     <div class="product-info">
                         <div class="product-price">Rp 120.000</div>
@@ -120,10 +120,10 @@
                 <!-- Item 7 -->
                 <div class="product-item-pinterest">
                     <div class="product-image-wrapper">
-                        <img src="assets/hot7.jpg" alt="Nike Sneakers">
+                        <img src="assets/Nike.jpg" alt="Nike trainers">
                     </div>
                     <div class="product-info">
-                        <div class="product-price">Rp 300.000</div>
+                        <div class="product-price">Rp 100.000</div>
                         <div class="product-name">Nike Vintage</div>
                         <div class="product-size">41</div>
                     </div>
@@ -132,11 +132,11 @@
                 <!-- Item 8 -->
                 <div class="product-item-pinterest">
                     <div class="product-image-wrapper">
-                        <img src="assets/hot8.jpg" alt="Track Jacket">
+                        <img src="assets/adidas.jpg" alt="Adidas Jacket">
                     </div>
                     <div class="product-info">
-                        <div class="product-price">Rp 180.000</div>
-                        <div class="product-name">Track Jacket</div>
+                        <div class="product-price">Rp 280.000</div>
+                        <div class="product-name">Adidas Jacket</div>
                         <div class="product-size">L</div>
                     </div>
                 </div>
@@ -144,11 +144,11 @@
                 <!-- Item 9 -->
                 <div class="product-item-pinterest">
                     <div class="product-image-wrapper">
-                        <img src="assets/hot9.jpg" alt="Converse High">
+                        <img src="assets/converse.jpg" alt="Converse High">
                     </div>
                     <div class="product-info">
                         <div class="product-price">Rp 450.000</div>
-                        <div class="product-name">Converse Vintage</div>
+                        <div class="product-name">Converse Shoes</div>
                         <div class="product-size">43</div>
                     </div>
                 </div>
@@ -156,7 +156,7 @@
                 <!-- Item 10 -->
                 <div class="product-item-pinterest">
                     <div class="product-image-wrapper">
-                        <img src="assets/hot10.jpg" alt="Adidas Jacket">
+                        <img src="assets/samba.jpg" alt="Adidas shoes">
                     </div>
                     <div class="product-info">
                         <div class="product-price">Rp 280.000</div>
@@ -176,7 +176,7 @@
                 <!-- Koleksi 1 -->
                 <a href="products.php?category=Fashion&subcategory=Outwear" class="collection-card">
                     <div class="collection-image-wrapper">
-                        <img src="assets/nf2u.jpg" alt="Workwear">
+                        <img src="workware.jpeg" alt="Workwear">
                     </div>
                     <h3 class="collection-title">Workwear</h3>
                 </a>
@@ -184,7 +184,7 @@
                 <!-- Koleksi 2 -->
                 <a href="products.php?category=Fashion" class="collection-card">
                     <div class="collection-image-wrapper">
-                        <img src="assets/collection2.jpg" alt="Baju Jersey">
+                        <img src="jersey.jpeg" alt="Baju Jersey">
                     </div>
                     <h3 class="collection-title">Baju Jersey</h3>
                 </a>
@@ -192,7 +192,7 @@
                 <!-- Koleksi 3 -->
                 <a href="products.php?category=Fashion" class="collection-card">
                     <div class="collection-image-wrapper">
-                        <img src="assets/collection3.jpg" alt="Y2K 2000s Core">
+                        <img src="y2k.jpeg" alt="Y2K 2000s Core">
                     </div>
                     <h3 class="collection-title">Y2K 2000s Core</h3>
                 </a>
@@ -200,22 +200,13 @@
         </div>
     </section>
 
-        <!-- Hero Banner -->
+       <!-- Hero Banner -->
     <section class="app-download-banner">
         <div class="banner-overlay">
             <div class="banner-content">
-                <h2>Download Preloved untuk<br>iPhone dan Android</h2>
-                <div class="download-buttons">
-                    <a href="#" class="btn-app-store">
-                        <img src="assets/app-store-badge.png" alt="Download on the App Store">
-                    </a>
-                    <a href="#" class="btn-google-play">
-                        <img src="assets/google-play-badge.png" alt="Get it on Google Play">
-                    </a>
-                </div>
+                <h2>Belanja lebih mudah dan cepat dengan aplikasi Preloved<br>Dapatkan notifikasi eksklusif, penawaran khusus, dan fitur-fitur menarik lainnya!</h2>
             </div>
         </div>
     </section>
-
 
     <?php include 'includes/footer.php'; ?>
