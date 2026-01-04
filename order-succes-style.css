@@ -1,0 +1,99 @@
+/* order-success-style.css - Halaman Pesanan Berhasil (seirama dengan UI lain) */
+
+.order-success-page {
+    padding: 80px 0;
+    background: #f9f9f9;
+    min-height: 100vh;
+}
+
+.order-success-page .container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.order-success-page h1 {
+    font-size: 42px;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #000;
+}
+
+/* Card Sukses */
+.success-card {
+    background: white;
+    border-radius: 24px;
+    padding: 60px 40px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.success-card .icon-success {
+    font-size: 80px;
+    margin-bottom: 30px;
+}
+
+.success-card p {
+    font-size: 20px;
+    color: #333;
+    margin: 20px 0;
+    line-height: 1.6;
+}
+
+.success-card .order-number {
+    font-size: 26px;
+    font-weight: bold;
+    color: #000;
+    margin: 30px 0;
+}
+
+.success-card .total-price {
+    font-size: 30px;
+    font-weight: bold;
+    color: #000;
+    margin: 30px 0;
+}
+
+.success-card .note {
+    font-size: 17px;
+    color: #666;
+    margin: 40px 0 50px;
+    line-height: 1.7;
+}
+
+.btn-continue {
+    padding: 20px 80px;
+    background: #000;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s ease;
+}
+
+.btn-continue:hover {
+    background: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .order-success-page h1 {
+        font-size: 36px;
+    }
+    .success-card {
+        padding: 40px 20px;
+    }
+    .btn-continue {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .order-success-page h1 {
+        font-size: 32px;
+    }
+}
