@@ -6,13 +6,13 @@
     <div class="hero-slider">
         <div class="slides-container">
             <div class="slide active">
-                <img src="assets/Screenshot 2025-12-27 040402.png" alt="Hero 1">
+                <img src="homepagesatu.jpg" alt="Hero 1">
             </div>
             <div class="slide">
-                <img src="assets/download (7).jpg" alt="Hero 2">
+                <img src="homepage.jpeg" alt="Hero 2">
             </div>
             <div class="slide">
-                <img src="assets/download (8).jpg" alt="Hero 3">
+                <img src="banner bawah.jpeg" alt="Hero 3">
             </div>
         </div>
     </div>
@@ -26,7 +26,7 @@
                     <h2>Apa Sih<br>Preloved Market?</h2>
                 </div>
                 <div class="about-image">
-                    <img src="assets/nf2u.jpg" alt="Preloved Market">
+                    <img src="alasan.png" alt="Preloved Market">
                 </div>
             </div>
 
@@ -175,7 +175,7 @@
                 <!-- Koleksi 1 -->
                 <a href="products.php?category=Fashion&subcategory=Outwear" class="collection-card">
                     <div class="collection-image-wrapper">
-                        <img src="assets/nf2u.jpg" alt="Workwear">
+                        <img src="workware.jpeg" alt="Workwear">
                     </div>
                     <h3 class="collection-title">Workwear</h3>
                 </a>
@@ -183,7 +183,7 @@
                 <!-- Koleksi 2 -->
                 <a href="products.php?category=Fashion" class="collection-card">
                     <div class="collection-image-wrapper">
-                        <img src="assets/collection2.jpg" alt="Baju Jersey">
+                        <img src="jersey.jpeg" alt="Baju Jersey">
                     </div>
                     <h3 class="collection-title">Baju Jersey</h3>
                 </a>
@@ -191,7 +191,7 @@
                 <!-- Koleksi 3 -->
                 <a href="products.php?category=Fashion" class="collection-card">
                     <div class="collection-image-wrapper">
-                        <img src="assets/collection3.jpg" alt="Y2K 2000s Core">
+                        <img src="y2k.jpeg" alt="Y2K 2000s Core">
                     </div>
                     <h3 class="collection-title">Y2K 2000s Core</h3>
                 </a>
@@ -203,15 +203,7 @@
     <section class="app-download-banner">
         <div class="banner-overlay">
             <div class="banner-content">
-                <h2>Download Preloved untuk<br>iPhone dan Android</h2>
-                <div class="download-buttons">
-                    <a href="#" class="btn-app-store">
-                        <img src="assets/app-store-badge.png" alt="Download on the App Store">
-                    </a>
-                    <a href="#" class="btn-google-play">
-                        <img src="assets/google-play-badge.png" alt="Get it on Google Play">
-                    </a>
-                </div>
+                <h2>Belanja lebih mudah dan cepat dengan aplikasi Preloved<br>Dapatkan notifikasi eksklusif, penawaran khusus, dan fitur-fitur menarik lainnya!</h2>
             </div>
         </div>
     </section>
