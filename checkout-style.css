@@ -149,6 +149,32 @@
     text-align: center;
 }
 
+.payment-options{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 10px;
+}
+
+.pay-option{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.pay-option input{
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.pay-option span{
+    font-weight: 600;
+    color:#000;
+}
+
 .btn-pay {
     width: 100%;
     padding: 20px;
@@ -182,6 +208,31 @@
 
 .btn-pay:hover {
     background: #333;
+}
+
+.payment-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.payment-option input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #000;
+}
+
+.payment-option span {
+    color: #000;
 }
 
 /* Responsive */

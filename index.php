@@ -1,6 +1,7 @@
 <?php include 'includes/header_home.php'; ?>
 
 <link rel="stylesheet" href="global-style.css?v=<?= time() ?>">
+<link rel="stylesheet" href="products-style.css?v=<?= time() ?>">
 
     <!-- Hero Slider -->
     <div class="hero-slider">
@@ -23,6 +24,7 @@
             <!-- Row: Judul + Gambar berdampingan -->
             <div class="about-header">
                 <div class="about-title">
+                    <h1 id="tentang-kami"></h1>
                     <h2>Apa Sih<br>Preloved Market?</h2>
                 </div>
                 <div class="about-image">
@@ -39,130 +41,130 @@
         </div>
     </section>
 
-    <!-- Section Hot Items -->
+        <!-- Section Hot Items -->
     <section class="hot-items-section">
         <div class="container">
             <h2 class="section-title">Hot Items</h2>
-            <div class="hot-items-grid">
+            <div class="hot-items-grid products-grid-pinterest">  <!-- Pakai class sama dari products-style.css -->
                 <!-- Item 1 -->
-                <div class="product-item-pinterest">
+                <a href="product_detail.php?id=1" class="product-item-pinterest">
                     <div class="product-image-wrapper">
-                        <img src="assets/s-l1200.png" alt="Dr. Martens Boots">
+                        <img src="assets/s-l1200 (1).png" alt="Dr. Martens Boots">
                     </div>
                     <div class="product-info">
                         <div class="product-price">Rp 800.000</div>
                         <div class="product-name">Dr. Martens</div>
                         <div class="product-size">42</div>
                     </div>
-                </div>
+                </a>
 
                 <!-- Item 2 -->
-                <div class="product-item-pinterest">
+                <a href="product_detail.php?id=2" class="product-item-pinterest">
                     <div class="product-image-wrapper">
-                        <img src="assets/s-l1200 (1).png" alt="Nike Blazer">
+                        <img src="assets/SEPATU.jpg" alt="Nike Vintage Shoes">
                     </div>
                     <div class="product-info">
                         <div class="product-price">Rp 235.000</div>
                         <div class="product-name">Vintage Nike</div>
                         <div class="product-size">40</div>
                     </div>
-                </div>
+                </a>
 
                 <!-- Item 3 -->
-                <div class="product-item-pinterest">
+                <a href="product_detail.php?id=3" class="product-item-pinterest">
                     <div class="product-image-wrapper">
-                        <img src="assets/hot3.jpg" alt="Track Pants Vintage">
+                        <img src="assets/CELANA.jpg" alt="Track Pants Vintage">
                     </div>
                     <div class="product-info">
                         <div class="product-price">Rp 85.000</div>
                         <div class="product-name">Vintage Pants</div>
                         <div class="product-size">L</div>
                     </div>
-                </div>
+                </a>
 
                 <!-- Item 4 -->
-                <div class="product-item-pinterest">
+                <a href="product_detail.php?id=4" class="product-item-pinterest">
                     <div class="product-image-wrapper">
-                        <img src="assets/hot4.jpg" alt="Ellesse Polo">
+                        <img src="assets/KEMEJA.jpg" alt="Ellesse Polo">
                     </div>
                     <div class="product-info">
                         <div class="product-price">Rp 155.000</div>
                         <div class="product-name">Ellesse Polo</div>
                         <div class="product-size">M</div>
                     </div>
-                </div>
+                </a>
 
                 <!-- Item 5 -->
-                <div class="product-item-pinterest">
+                <a href="product_detail.php?id=5" class="product-item-pinterest">
                     <div class="product-image-wrapper">
-                        <img src="assets/hot5.jpg" alt="Dr. Martens Brown">
+                        <img src="assets/DR.JPG" alt="Dr. Martens Brown">
                     </div>
                     <div class="product-info">
                         <div class="product-price">Rp 850.000</div>
                         <div class="product-name">Dr. Martens</div>
                         <div class="product-size">42</div>
                     </div>
-                </div>
+                </a>
 
                 <!-- Item 6 -->
-                <div class="product-item-pinterest">
+                <a href="product_detail.php?id=6" class="product-item-pinterest">
                     <div class="product-image-wrapper">
-                        <img src="assets/hot6.jpg" alt="Vintage Shirt">
+                        <img src="assets/KAOS.jpg" alt="Vintage Shirt">
                     </div>
                     <div class="product-info">
                         <div class="product-price">Rp 120.000</div>
                         <div class="product-name">Vintage Shirt</div>
                         <div class="product-size">M</div>
                     </div>
-                </div>
+                </a>
 
                 <!-- Item 7 -->
-                <div class="product-item-pinterest">
+                <a href="product_detail.php?id=7" class="product-item-pinterest">
                     <div class="product-image-wrapper">
-                        <img src="assets/hot7.jpg" alt="Nike Sneakers">
+                        <img src="assets/Nike.jpg" alt="Nike trainers">
                     </div>
                     <div class="product-info">
-                        <div class="product-price">Rp 300.000</div>
+                        <div class="product-price">Rp 100.000</div>
                         <div class="product-name">Nike Vintage</div>
                         <div class="product-size">41</div>
                     </div>
-                </div>
+                </a>
 
                 <!-- Item 8 -->
-                <div class="product-item-pinterest">
+                <a href="product_detail.php?id=8" class="product-item-pinterest">
                     <div class="product-image-wrapper">
-                        <img src="assets/hot8.jpg" alt="Track Jacket">
+                        <img src="assets/adidas.jpg" alt="Adidas Jacket">
                     </div>
                     <div class="product-info">
-                        <div class="product-price">Rp 180.000</div>
-                        <div class="product-name">Track Jacket</div>
+                        <div class="product-price">Rp 280.000</div>
+                        <div class="product-name">Adidas Jacket</div>
                         <div class="product-size">L</div>
                     </div>
-                </div>
+                </a>
 
                 <!-- Item 9 -->
-                <div class="product-item-pinterest">
+                <a href="product_detail.php?id=9" class="product-item-pinterest">
                     <div class="product-image-wrapper">
-                        <img src="assets/hot9.jpg" alt="Converse High">
+                        <img src="assets/converse.jpg" alt="Converse High">
                     </div>
                     <div class="product-info">
                         <div class="product-price">Rp 450.000</div>
-                        <div class="product-name">Converse Vintage</div>
+                        <div class="product-name">Converse Shoes</div>
                         <div class="product-size">43</div>
                     </div>
-                </div>
+                </a>
 
                 <!-- Item 10 -->
-                <div class="product-item-pinterest">
+                <a href="product_detail.php?id=10" class="product-item-pinterest">
                     <div class="product-image-wrapper">
-                        <img src="assets/hot10.jpg" alt="Adidas Jacket">
+                        <img src="assets/samba.jpg" alt="Adidas shoes">
                     </div>
                     <div class="product-info">
                         <div class="product-price">Rp 280.000</div>
                         <div class="product-name">Adidas Tracktop</div>
                         <div class="product-size">XL</div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </section>
@@ -199,7 +201,7 @@
         </div>
     </section>
 
-        <!-- Hero Banner -->
+       <!-- Hero Banner -->
     <section class="app-download-banner">
         <div class="banner-overlay">
             <div class="banner-content">
@@ -207,6 +209,5 @@
             </div>
         </div>
     </section>
-
 
     <?php include 'includes/footer.php'; ?>

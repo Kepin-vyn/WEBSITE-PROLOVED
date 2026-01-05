@@ -626,12 +626,73 @@ body {
     gap: 20px;
 }
 
+/* // css untuk cara_kerja.php// */
+
+.cara-kerja-wrapper{
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.cara-kerja-wrapper h1{
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.cara-kerja-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.cara-kerja-card img{
+    width: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+    height: 260px;
+}
+
+.cara-kerja-card h2{
+    font-size: 22px;
+    margin: 15px 0 10px;
+}
+
+.cara-kerja-card p{
+    line-height: 1.7;
+}
+
+.cara-kerja-card a{
+    color: #0062ff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.cara-kerja-card a:hover{
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media(max-width: 900px){
+    .cara-kerja-grid{
+        grid-template-columns: 1fr;
+    }
+}
+
+/* // css untuk icon ig, tt, fb di footer // */
+.social-icons {
+    display: flex;
+    align-items: center;
+}
+
 .social-icons a {
     margin-right: 20px;
 }
 
 .social-icons img {
-    height: 40px;
+    width: 80px;              /* pastikan semua sama */
+    height: 40px;             /* pastikan semua sama */
+    object-fit: contain;      /* biar nggak gepeng */
     transition: opacity 0.3s ease;
 }
 

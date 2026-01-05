@@ -5,13 +5,16 @@
 <?php endif; ?>
 
 <?php
-// products.php - Versi FINAL & AMAN
+// products.php - Versi FINAL & AMAN dengan SEARCH
 
 include 'config/db_connect.php';
 
 // Parameter
 $category = $_GET['category'] ?? 'Fashion';
 $subcategory = $_GET['sub'] ?? null;
+
+// Search
+$search = trim($_GET['search'] ?? '');
 
 // Sorting
 $sort_options = [
@@ -67,9 +70,15 @@ $filters_per_category = [
 $current_filters = $filters_per_category[$category] ?? $filters_per_category['Fashion'];
 $subcategories = $current_filters['subcategories'] ?? [];
 
-// Query produk - DIPERBAIKI: hanya kolom yang ADA di tabel
+// Query produk - TAMBAH SEARCH
 $sql = "SELECT id, name, price, size, `condition`, image1 FROM products WHERE category = :category";
 $params = [':category' => $category];
+
+// Tambah search
+if (!empty($search)) {
+    $sql .= " AND name LIKE :search";
+    $params[':search'] = '%' . $search . '%';
+}
 
 if ($subcategory) {
     $sql .= " AND subcategory = :subcategory";
@@ -119,7 +128,13 @@ $products = $stmt->fetchAll();
 
 <div class="products-page-container">
     <div class="container">
-        <h1 style="font-size: 36px; margin: 0px 0 20px;"><?= htmlspecialchars($category) ?></h1>
+        <h1 style="font-size: 36px; margin: 0px 0 20px;">
+            <?php if (!empty($search)): ?>
+                Hasil pencarian "<?= htmlspecialchars($search) ?>"
+            <?php else: ?>
+                <?= htmlspecialchars($category) ?>
+            <?php endif; ?>
+        </h1>
 
         <!-- Filter Pills -->
         <div class="filter-pills-bar">
@@ -128,7 +143,7 @@ $products = $stmt->fetchAll();
                 <div class="dropdown-options">
                     <?php foreach ($subcategories as $sub): ?>
                         <?php $sub_value = $current_filters['sub_map'][$sub] ?? $sub; ?>
-                        <a href="?category=<?= urlencode($category) ?>&sub=<?= urlencode($sub_value) ?>&sort=<?= $sort ?>">
+                        <a href="?category=<?= urlencode($category) ?>&sub=<?= urlencode($sub_value) ?>&sort=<?= $sort ?>&search=<?= urlencode($search ?? '') ?>">
                             <?= htmlspecialchars($sub) ?>
                         </a><br>
                     <?php endforeach; ?>
@@ -152,7 +167,7 @@ $products = $stmt->fetchAll();
                         ?>
                         <label>
                             <input type="checkbox" <?= in_array($s, $sizes) ? 'checked' : '' ?>
-                                   onchange="window.location='?category=<?= urlencode($category) ?>&sub=<?= urlencode($subcategory ?? '') ?><?= $size_query ?>&sort=<?= $sort ?>'">
+                                   onchange="window.location='?category=<?= urlencode($category) ?>&sub=<?= urlencode($subcategory ?? '') ?><?= $size_query ?>&sort=<?= $sort ?>&search=<?= urlencode($search ?? '') ?>'">
                             <?= htmlspecialchars($s) ?>
                         </label><br>
                     <?php endforeach; ?>
@@ -165,6 +180,7 @@ $products = $stmt->fetchAll();
                 <div class="dropdown-options">
                     <form method="GET" action="">
                         <input type="hidden" name="category" value="<?= htmlspecialchars($category) ?>">
+                        <input type="hidden" name="search" value="<?= htmlspecialchars($search ?? '') ?>">
                         <?php if ($subcategory): ?>
                             <input type="hidden" name="sub" value="<?= htmlspecialchars($subcategory) ?>">
                         <?php endif; ?>
@@ -197,7 +213,7 @@ $products = $stmt->fetchAll();
                         ?>
                         <label>
                             <input type="checkbox" <?= in_array($c, $conditions) ? 'checked' : '' ?>
-                                   onchange="window.location='?category=<?= urlencode($category) ?>&sub=<?= urlencode($subcategory ?? '') ?><?= $cond_query ?>&sort=<?= $sort ?>'">
+                                   onchange="window.location='?category=<?= urlencode($category) ?>&sub=<?= urlencode($subcategory ?? '') ?><?= $cond_query ?>&sort=<?= $sort ?>&search=<?= urlencode($search ?? '') ?>'">
                             <?= $c ?>
                         </label><br>
                     <?php endforeach; ?>
@@ -207,9 +223,9 @@ $products = $stmt->fetchAll();
             <!-- Sort by -->
             <div class="filter-pill <?= $sort !== 'newest' ? 'active' : '' ?>">Sort by
                 <div class="dropdown-options">
-                    <a href="?category=<?= urlencode($category) ?>&sub=<?= urlencode($subcategory ?? '') ?>&sort=newest">Terbaru</a><br>
-                    <a href="?category=<?= urlencode($category) ?>&sub=<?= urlencode($subcategory ?? '') ?>&sort=price_low">Harga: Termurah</a><br>
-                    <a href="?category=<?= urlencode($category) ?>&sub=<?= urlencode($subcategory ?? '') ?>&sort=price_high">Harga: Tertinggi</a>
+                    <a href="?category=<?= urlencode($category) ?>&sub=<?= urlencode($subcategory ?? '') ?>&sort=newest&search=<?= urlencode($search ?? '') ?>">Terbaru</a><br>
+                    <a href="?category=<?= urlencode($category) ?>&sub=<?= urlencode($subcategory ?? '') ?>&sort=price_low&search=<?= urlencode($search ?? '') ?>">Harga: Termurah</a><br>
+                    <a href="?category=<?= urlencode($category) ?>&sub=<?= urlencode($subcategory ?? '') ?>&sort=price_high&search=<?= urlencode($search ?? '') ?>">Harga: Tertinggi</a>
                 </div>
             </div>
         </div>
@@ -220,7 +236,7 @@ $products = $stmt->fetchAll();
                 <?php 
                 $display_sub = array_search($subcategory, $current_filters['sub_map'] ?? []) ?: $subcategory;
                 ?>
-                <span class="filter-tag"><?= htmlspecialchars($display_sub) ?> <span class="close-tag" onclick="window.location='?category=<?= urlencode($category) ?>'">✕</span></span>
+                <span class="filter-tag"><?= htmlspecialchars($display_sub) ?> <span class="close-tag" onclick="window.location='?category=<?= urlencode($category) ?>&search=<?= urlencode($search ?? '') ?>'">✕</span></span>
             <?php endif; ?>
 
             <?php foreach ($sizes as $s): ?>
@@ -228,12 +244,13 @@ $products = $stmt->fetchAll();
                 $new_sizes = array_diff($sizes, [$s]);
                 $new_sizes = array_values($new_sizes);
                 $query = $_GET; $query['size'] = $new_sizes; 
+                $query['search'] = $search ?? '';
                 ?>
                 <span class="filter-tag"><?= htmlspecialchars($s) ?> <span class="close-tag" onclick="window.location='?<?= http_build_query($query) ?>'">✕</span></span>
             <?php endforeach; ?>
 
             <?php if ($min_price || $max_price): ?>
-                <?php $query = $_GET; unset($query['min_price'], $query['max_price']); ?>
+                <?php $query = $_GET; unset($query['min_price'], $query['max_price']); $query['search'] = $search ?? ''; ?>
                 <span class="filter-tag">Harga: Rp <?= number_format($min_price ?: 10000) ?> - <?= $max_price ? number_format($max_price) : 'Max' ?> 
                     <span class="close-tag" onclick="window.location='?<?= http_build_query($query) ?>'">✕</span>
                 </span>
@@ -243,13 +260,13 @@ $products = $stmt->fetchAll();
                 <?php 
                 $new_conds = array_diff($conditions, [$c]);
                 $new_conds = array_values($new_conds);
-                $query = $_GET; $query['condition'] = $new_conds;
+                $query = $_GET; $query['condition'] = $new_conds; $query['search'] = $search ?? '';
                 ?>
                 <span class="filter-tag"><?= htmlspecialchars($c) ?> <span class="close-tag" onclick="window.location='?<?= http_build_query($query) ?>'">✕</span></span>
             <?php endforeach; ?>
 
             <?php if ($sort !== 'newest'): ?>
-                <?php $query = $_GET; unset($query['sort']); ?>
+                <?php $query = $_GET; unset($query['sort']); $query['search'] = $search ?? ''; ?>
                 <span class="filter-tag"><?= $sort === 'price_low' ? 'Harga: Termurah' : 'Harga: Tertinggi' ?> 
                     <span class="close-tag" onclick="window.location='?<?= http_build_query($query) ?>'">✕</span>
                 </span>
@@ -258,10 +275,10 @@ $products = $stmt->fetchAll();
 
         <!-- Subkategori Horizontal -->
         <div class="subcategories-horizontal">
-            <a href="?category=<?= urlencode($category) ?>" class="<?= !$subcategory ? 'active' : '' ?>">Semua</a>
+            <a href="?category=<?= urlencode($category) ?>&search=<?= urlencode($search ?? '') ?>" class="<?= !$subcategory ? 'active' : '' ?>">Semua</a>
             <?php foreach ($subcategories as $sub): ?>
                 <?php $sub_value = $current_filters['sub_map'][$sub] ?? $sub; ?>
-                <a href="?category=<?= urlencode($category) ?>&sub=<?= urlencode($sub_value) ?>" 
+                <a href="?category=<?= urlencode($category) ?>&sub=<?= urlencode($sub_value) ?>&search=<?= urlencode($search ?? '') ?>" 
                    class="<?= ($subcategory === $sub_value) ? 'active' : '' ?>">
                     <?= htmlspecialchars($sub) ?>
                 </a>
@@ -272,7 +289,7 @@ $products = $stmt->fetchAll();
         <div class="products-grid-pinterest">
             <?php if (empty($products)): ?>
                 <p style="grid-column: 1/-1; text-align:center; padding:100px 0; font-size:18px; color:#888;">
-                    Belum ada produk yang sesuai.
+                    Belum ada produk yang sesuai dengan pencarian "<?= htmlspecialchars($search) ?>".
                 </p>
             <?php else: ?>
                 <?php foreach ($products as $product): ?>
@@ -289,7 +306,7 @@ $products = $stmt->fetchAll();
                                 Rp <?= number_format($product['price']) ?>
                             </div>
                             <div class="product-name">
-                                <?= htmlspecialchars($product['name']) ?>  <!-- Nama produk sebagai "brand" -->
+                                <?= htmlspecialchars($product['name']) ?>
                             </div>
                             <div class="product-size">
                                 <?= $product['size'] ?: 'One size' ?>

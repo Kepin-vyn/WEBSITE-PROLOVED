@@ -266,6 +266,21 @@
     text-overflow: ellipsis;
 }
 
+.search-results-title {
+    margin: 40px 0 30px;
+    text-align: left;
+}
+
+.search-results-title h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.search-results-title p {
+    font-size: 16px;
+    color: #666;
+}
+
 /* Responsive tetap sama */
 @media (max-width: 1200px) {
     .products-grid-pinterest {

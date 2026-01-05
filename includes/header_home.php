@@ -17,10 +17,12 @@
                     </a>
                 </div>
                 <div class="search-container">
-                    <div class="search-bar">
+                    <!-- SEARCH BAR JADI FORM -->
+                    <form action="products.php" method="GET" class="search-bar">
                         <span class="search-icon"></span>
-                        <input type="text" id="searchInput" placeholder="Search">
-                    </div>
+                        <input type="text" name="search" id="searchInput" placeholder="Cari produk..." value="<?= htmlspecialchars($_GET['search'] ?? '') ?>">
+                        <button type="submit" style="display:none;"></button> <!-- Hidden submit untuk Enter -->
+                    </form>
                 </div>
 
                 <!-- Icon Keranjang di dalam top-bar -->

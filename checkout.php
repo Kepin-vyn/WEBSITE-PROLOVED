@@ -63,7 +63,24 @@ foreach ($_SESSION['cart'] as $item) {
                         <p>Ongkir akan dihitung otomatis setelah alamat lengkap.</p>
                     </div>
 
-                    <!-- Tombol Checkout dipindah ke dalam form -->
+                    <div class="form-group">
+                        <label>Metode Pembayaran</label>
+                        <div class="payment-options">
+                            <label class="payment-option">
+                                <input type="radio" name="payment_method" value="transfer" required>
+                                <span>Transfer Bank</span>
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="payment_method" value="qris" required>
+                                <span>QRIS / E-Wallet</span>
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="payment_method" value="cod" required>
+                                <span>Cash on Delivery (COD)</span>
+                            </label>
+                        </div>
+                    </div>
+
                     <div class="checkout-action">
                         <button type="submit" class="btn-pay">
                             Bayar Sekarang
