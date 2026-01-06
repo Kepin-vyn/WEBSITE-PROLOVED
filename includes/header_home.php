@@ -13,7 +13,7 @@
             <div class="top-bar">
                 <div class="logo">
                     <a href="index.php">
-                    <img src="assets/download (5).jpg" alt="Preloved Logo">
+                    <img src="logoo.png" alt="Preloved Logo">
                     </a>
                 </div>
                 <div class="search-container">
