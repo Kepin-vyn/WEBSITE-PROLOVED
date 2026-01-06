@@ -516,7 +516,7 @@ body {
 .app-download-banner {
     position: relative;
     height: 375px;
-    background-image: url('assets/app-banner-bg.jpg');
+    background-image: url('banner\ bawah.jpeg');
     background-size: cover;
     background-position: center;
     margin: 80px 0;

@@ -68,18 +68,8 @@ $recommendations = $recom_stmt->fetchAll();
             <p class="product-price">Rp <?= number_format($product['price']) ?></p>
 
            <div class="action-buttons">
-
-                <form action="checkout.php" method="GET" style="margin:0;">
-                    <input type="hidden" name="id" value="<?= $product['id'] ?>">
-                    <input type="hidden" name="name" value="<?= htmlspecialchars($product['name']) ?>">
-                    <input type="hidden" name="price" value="<?= $product['price'] ?>">
-                    <input type="hidden" name="image" value="<?= $product['image1'] ?>">
-
-                    <button type="submit" class="btn-buy">Beli Langsung</button>
-                </form>
-
+                <button class="btn-buy" onclick="buyNow(<?= $product['id'] ?>)">Beli Langsung</button>
                 <button class="btn-cart" onclick="addToCart(<?= $product['id'] ?>)">+ Keranjang</button>
-
             </div>
 
             <div class="description-section">
@@ -145,6 +135,24 @@ function addToCart(productId) {
             } else {
                 alert('Gagal menambah ke keranjang.');
             }
+        });
+}
+</script>
+
+<script>
+    function buyNow(productId) {
+    fetch('add_to_cart.php?id=' + productId)
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                // Langsung ke checkout setelah tambah ke keranjang
+                window.location.href = 'checkout.php';
+            } else {
+                alert('Gagal menambah ke keranjang.');
+            }
+        })
+        .catch(() => {
+            alert('Error koneksi.');
         });
 }
 </script>

@@ -8,13 +8,13 @@
         <div class="slides-container">
 
             <div class="slide active">
-                <img src="banner1.jpg" alt="Hero 1">
+                <img src="homepage.jpeg" alt="Hero 1">
             </div>
             <div class="slide">
-                <img src="banner2.jpeg" alt="Hero 2">
+                <img src="homepagesatu.jpg" alt="Hero 2">
             </div>
             <div class="slide">
-                <img src="banner3.jpeg" alt="Hero 3">
+                <img src="banner bawah.jpeg" alt="Hero 3">
             </div>
         </div>
         <script src="script.js"></script>
