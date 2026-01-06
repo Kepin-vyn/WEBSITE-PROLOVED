@@ -68,7 +68,16 @@ $recommendations = $recom_stmt->fetchAll();
             <p class="product-price">Rp <?= number_format($product['price']) ?></p>
 
            <div class="action-buttons">
-                <button class="btn-buy">Beli Langsung</button>
+
+                <form action="checkout.php" method="GET" style="margin:0;">
+                    <input type="hidden" name="id" value="<?= $product['id'] ?>">
+                    <input type="hidden" name="name" value="<?= htmlspecialchars($product['name']) ?>">
+                    <input type="hidden" name="price" value="<?= $product['price'] ?>">
+                    <input type="hidden" name="image" value="<?= $product['image1'] ?>">
+
+                    <button type="submit" class="btn-buy">Beli Langsung</button>
+                </form>
+
                 <button class="btn-cart" onclick="addToCart(<?= $product['id'] ?>)">+ Keranjang</button>
 
             </div>
