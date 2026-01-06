@@ -67,9 +67,10 @@ $recommendations = $recom_stmt->fetchAll();
             </p>
             <p class="product-price">Rp <?= number_format($product['price']) ?></p>
 
-            <div class="action-buttons">
+           <div class="action-buttons">
                 <button class="btn-buy">Beli Langsung</button>
                 <button class="btn-cart" onclick="addToCart(<?= $product['id'] ?>)">+ Keranjang</button>
+
             </div>
 
             <div class="description-section">
